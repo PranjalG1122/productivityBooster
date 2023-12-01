@@ -1,0 +1,24 @@
+{
+  "name": "Productivity Booster",
+  "version": "1.0.0",
+  "description": "An extension that redirects from social media sites to boost productivity",
+  "manifest_version": 3,
+  "author": "Pranjal Gupta",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Productivity"
+  },
+  "permissions": ["tabs", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "js": ["scripts/redirect.js"],
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.twitter.com/*",
+        "*://*.instagram.com/*",
+        "*://*.facebook.com/*",
+        "*://*.reddit.com/*"
+      ]
+    }
+  ]
+}
